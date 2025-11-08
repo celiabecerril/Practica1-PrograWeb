@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peluquería Pereda 41 - Bienvenido</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6366f1">
+    <link rel="icon" type="image/png" href="icon-192.png">
+</head>
+<body>
+    <div class="landing-container">
+        <div class="landing-header">
+            <h1>✨ Peluquería Pereda 41 ✨</h1>
+            <p class="tagline">Tu belleza, nuestra pasión</p>
+        </div>
+
+        <div class="landing-content">
+            <div class="welcome-card">
+                <h2>Bienvenido/a</h2>
+                <p>Descubre nuestros servicios profesionales de peluquería y estética. Experiencia, calidad y atención personalizada.</p>
+                
+                <div class="cta-buttons">
+                    <a href="login.html" class="btn btn-primary">🔐 Iniciar Sesión</a>
+                    <a href="register.html" class="btn btn-secondary">📝 Registrarse</a>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">💇‍♀️</div>
+                    <h3>Servicios Profesionales</h3>
+                    <p>Cortes, tintes, peinados, tratamientos y más. Todo lo que necesitas para lucir increíble.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Atención Personalizada</h3>
+                    <p>Adaptamos nuestros servicios a tus necesidades y estilo personal.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Chat en Vivo</h3>
+                    <p>Consulta con nuestro equipo en tiempo real. Estamos aquí para ayudarte.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="landing-footer">
+            <p>&copy; 2025 Peluquería Pereda 41. Todos los derechos reservados.</p>
+            <p style="margin-top: 10px; opacity: 0.7;">📍 Calle Pereda 41 | 📞 +34 123 456 789</p>
+        </footer>
+    </div>
+
+    <script>
+       
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('✅ Service Worker registrado'))
+                    .catch(err => console.log('❌ Error al registrar Service Worker:', err));
+            });
+        }
+    </script>
+</body>
+</html>
