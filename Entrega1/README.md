@@ -45,10 +45,20 @@ Implementar una aplicación completa que integre:
 - npm
 - MongoDB accesible (local o remoto)
 
-No se requiere Docker ni servicios externos para la práctica.
+
 
 ---
+## Decisiones de diseño y desarrollo
 
+- **Arquitectura:** se usó un enfoque MVC para separar responsabilidades (controladores, modelos, rutas).
+- **Autenticación JWT:** se eligió JWT porque permite sesiones sin estado y facilita la integración con sockets.
+- **Base de datos MongoDB:** por su flexibilidad y compatibilidad con Node.js (Mongoose).
+- **Socket.IO:** elegido para el chat en tiempo real y fácil manejo de autenticación en la conexión.
+- **Persistencia del chat:** los mensajes se guardan en MongoDB para mantener el historial entre sesiones.
+- **Frontend simple:** se priorizó la funcionalidad sobre el diseño, usando HTML/CSS/JS puros.
+- **Seguridad:** las rutas sensibles están protegidas con middleware (`authenticateJWT`, `isAdmin`).
+
+---
 ## Variables de entorno (crear `.env` en la raíz)
 
 ```
